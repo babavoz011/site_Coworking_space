@@ -1,0 +1,87 @@
+/* Правая колонка */
+.testimonials-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  /* Расстояние между фичами */
+}
+
+/* Элемент фичи */
+.feature-item {
+    display: flex;
+    gap: 1.5rem;  /* Расстояние между иконкой и текстом */
+    align-items: flex-start;  /* Выравнивание по верхнему краю */
+}
+
+/* Иконки */
+.feature-icon-1,
+.feature-icon-2,
+.feature-icon-3 {
+    width: 3rem;  /* 48px - размер подберите под свои иконки */
+    height: 3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;  /* Запрещаем сжиматься */
+}
+
+/* Пути к иконкам (замените на свои) */
+.feature-icon-1 {
+    background-image: url('/icons/reservasi.svg');  /* Или .png */
+}
+
+.feature-icon-2 {
+    background-image: url('/icons/fleksibel.svg');
+}
+
+.feature-icon-3 {
+    background-image: url('/icons/kustomisasi.svg');
+}
+
+/* Контент фичи */
+.feature-content h3 {
+    font-weight: 600;  /* Или 700, смотрите по дизайну */
+    font-size: 1.125rem;  /* 18px */
+    color: #121212;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.feature-content p {
+    font-weight: 400;
+    font-size: 0.9375rem;  /* 15px */
+    color: #404852;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Статистика (дополнение к вашему CSS) */
+.statistics-number {
+    font-weight: 700;
+    font-size: 2.5rem;  /* 40px */
+    color: #121212;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.statistics-desc {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #404852;
+    line-height: 1.5;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .testimonials-content {
+        grid-template-columns: 1fr;  /* Одна колонка на мобилках */
+        gap: 3rem;
+    }
+    
+    .feature-item {
+        gap: 1rem;
+    }
+    
+    .statistics-number {
+        font-size: 2rem;
+    }
+}
